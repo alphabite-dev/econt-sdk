@@ -1,0 +1,47 @@
+# Source files (only dist should be published)
+src/
+tests/
+examples/
+
+# Config files
+tsconfig.json
+vitest.config.ts
+.env
+.env.example
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+
+# Build artifacts (keep only dist/)
+*.tsbuildinfo
+
+# Temporary files
+*.log
+*.tmp
+*.cache
+
+# Documentation (these are included via package.json files array)
+# But exclude extra docs not needed in npm
+TEST_PLAN.md
+TEST_RESULTS.md
+FINAL_STATUS.md
+view-source_https___demo.econt.com_ee_services_Nomenclatures_.html
+
+# Development
+node_modules/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Cache examples (don't include in package)
+econt-cache/
+cache/
