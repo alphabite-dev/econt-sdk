@@ -47,12 +47,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alphabite-org/econt-sdk.git"
+    "url": "https://github.com/alphabite-dev/econt-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/alphabite-org/econt-sdk/issues"
+    "url": "https://github.com/alphabite-dev/econt-sdk/issues"
   },
-  "homepage": "https://github.com/alphabite-org/econt-sdk#readme",
+  "homepage": "https://github.com/alphabite-dev/econt-sdk#readme",
   "engines": {
     "node": ">=14.0.0"
   },

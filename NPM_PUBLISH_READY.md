@@ -46,7 +46,7 @@ The package is **100% ready** for publication to npm.
   "version": "1.0.0",
   "license": "MIT",
   "author": "Alphabite",
-  "repository": "https://github.com/alphabite-org/econt-sdk"
+  "repository": "https://github.com/alphabite-dev/econt-sdk"
 }
 ```
 
@@ -219,7 +219,7 @@ The package is production-ready and fully tested. Everything is configured for s
 ### Package Will Be Available At:
 
 - npm: https://www.npmjs.com/package/@alphabite/econt-sdk
-- GitHub: https://github.com/alphabite-org/econt-sdk
+- GitHub: https://github.com/alphabite-dev/econt-sdk
 
 ### Installation After Publishing:
 

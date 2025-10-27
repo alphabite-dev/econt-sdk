@@ -580,7 +580,7 @@ The SDK supports all common Econt workflows:
 
 ```bash
 # Clone repository
-git clone https://github.com/alphabite-org/econt-sdk.git
+git clone https://github.com/alphabite-dev/econt-sdk.git
 cd econt-sdk
 
 # Install dependencies
@@ -643,7 +643,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 💬 Support
 
 - 📧 Email: support@alphabite.org
-- 🐛 Issues: [GitHub Issues](https://github.com/alphabite-org/econt-sdk/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/alphabite-dev/econt-sdk/issues)
 - 📖 Documentation: [Full Docs](./API_WORKFLOW_GUIDE.md)
 - 🔧 API Reference: [Econt API Docs](https://demo.econt.com/ee/services/)
 
