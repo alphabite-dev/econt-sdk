@@ -1,0 +1,69 @@
+{
+  "name": "@alphabite/econt-sdk",
+  "version": "2.0.0",
+  "description": "Complete TypeScript SDK for the Econt shipping API",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "econt",
+    "shipping",
+    "bulgaria",
+    "logistics",
+    "courier",
+    "delivery",
+    "sdk",
+    "api",
+    "typescript",
+    "cache",
+    "nomenclatures"
+  ],
+  "author": "Alphabite",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alphabite-dev/econt-sdk.git",
+    "directory": "packages/sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/alphabite-dev/econt-sdk/issues"
+  },
+  "homepage": "https://github.com/alphabite-dev/econt-sdk#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@alphabite/econt-types": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@vitest/ui": "^4.0.3",
+    "dotenv": "^17.2.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^4.0.3"
+  }
+}

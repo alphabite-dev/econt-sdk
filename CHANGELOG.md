@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-10-20
+
+### Changed
+
+- **No more axios.** The HTTP client is now a thin wrapper over the platform `fetch`, so the SDK has no runtime
+  dependency besides its types package. Loading it no longer pulls in axios and its 22 transitive packages
+  (about 5 MB of heap per process).
+- **Node.js 18 or newer** is required (global `fetch` and `AbortSignal.timeout`).
+- Errors are unchanged: 401/403 still throw `EcontAuthenticationError`, 429 `EcontRateLimitError` (with `retryAfter`),
+  a timeout or unreachable host `EcontNetworkError`, and any other non-2xx `EcontAPIError` with the API's `message`,
+  the parsed body as `response`, and `x-request-id` as `requestId`.
+
+### Breaking
+
+- `EcontAPIError.fromAxiosError` is replaced by `EcontAPIError.fromResponse(statusCode, data, headers)`.
+- The internal `HttpClient` takes its own request config instead of `AxiosRequestConfig`. The SDK's resource
+  methods are unchanged, so this only affects code that constructed `HttpClient` directly.
+
 ## [1.0.0] - 2025-10-27
 
 ### 🎉 Initial Release

@@ -1,4 +1,4 @@
-import { EcontClient, ShipmentType, ShipmentService, PaymentMethod } from "../src";
+import { EcontClient, ShipmentType, ShipmentService, PaymentMethod } from "../packages/sdk/src";
 
 /**
  * Create shipment label example

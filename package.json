@@ -1,34 +1,30 @@
 {
-  "name": "@alphabite/econt-sdk",
-  "version": "1.0.0",
-  "description": "TypeScript SDK for Econt shipping API with built-in caching",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "name": "@alphabite/econt",
+  "version": "2.0.0",
+  "description": "Complete TypeScript SDK for the Econt shipping API",
+  "main": "packages/sdk/dist/index.js",
+  "module": "packages/sdk/dist/index.mjs",
+  "types": "packages/sdk/dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "types": "./packages/sdk/dist/index.d.ts",
+      "require": "./packages/sdk/dist/index.js",
+      "import": "./packages/sdk/dist/index.mjs"
     }
   },
-  "files": [
-    "dist",
-    "README.md",
-    "CACHING.md",
-    "API_WORKFLOW_GUIDE.md",
-    "LICENSE"
+  "workspaces": [
+    "packages/*"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
-    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:ui": "vitest --ui",
-    "typecheck": "tsc --noEmit"
+    "build": "npm run build --workspaces",
+    "build:types": "npm run build -w @alphabite/econt-types",
+    "build:sdk": "npm run build -w @alphabite/econt-sdk",
+    "dev": "npm run dev -w @alphabite/econt-sdk",
+    "test": "npm run test -w @alphabite/econt-sdk",
+    "test:watch": "npm run test:watch -w @alphabite/econt-sdk",
+    "test:ui": "npm run test:ui -w @alphabite/econt-sdk",
+    "typecheck": "npm run typecheck --workspaces",
+    "clean": "npm run clean --workspaces --if-present"
   },
   "keywords": [
     "econt",
@@ -54,10 +50,9 @@
   },
   "homepage": "https://github.com/alphabite-dev/econt-sdk#readme",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "dependencies": {
-    "axios": "^1.6.2"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",

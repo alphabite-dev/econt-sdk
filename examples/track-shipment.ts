@@ -1,4 +1,4 @@
-import { EcontClient } from "../src";
+import { EcontClient } from "../packages/sdk/src";
 
 /**
  * Track shipment example
